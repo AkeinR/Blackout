@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1cuaak55k0hm"]
+[gd_scene load_steps=6 format=3 uid="uid://c1cuaak55k0hm"]
 
+[ext_resource type="Script" path="res://Plasma blaster.gd" id="1_cl8lp"]
 [ext_resource type="Texture2D" uid="uid://bnipi2af2lx1x" path="res://pixilart-drawing-removebg-preview.png" id="1_ybgi4"]
+[ext_resource type="PackedScene" uid="uid://30bkt2aomk7j" path="res://plasma_bullet.tscn" id="3_10fua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62jbj"]
 atlas = ExtResource("1_ybgi4")
@@ -19,6 +21,11 @@ animations = [{
 
 [node name="plasma blaster" type="Node2D"]
 position = Vector2(-57, -278)
+script = ExtResource("1_cl8lp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4fmhk")
+
+[node name="Plasma thing" type="Node2D" parent="."]
+
+[node name="Plasma bullet" parent="Plasma thing" instance=ExtResource("3_10fua")]
