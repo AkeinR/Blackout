@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_pjk58"]
 [ext_resource type="Texture2D" uid="uid://bb15tednjkyrk" path="res://Pixel Adventure 1/Free/Main Characters/Ninja Frog/Idle (32x32).png" id="2_12p6p"]
 [ext_resource type="Texture2D" uid="uid://bs2elujtsiosk" path="res://Pixel Adventure 1/Free/Main Characters/Ninja Frog/Jump (32x32).png" id="3_d8qp3"]
-[ext_resource type="Script" path="res://Scenes/Marker2D.gd" id="4_kp5qg"]
+[ext_resource type="PackedScene" uid="uid://c1cuaak55k0hm" path="res://Scenes/Plasma blaster.tscn" id="5_yid8t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ehvd6"]
 
@@ -125,4 +125,6 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Marker2D" type="Marker2D" parent="."]
-script = ExtResource("4_kp5qg")
+
+[node name="plasma blaster" parent="." instance=ExtResource("5_yid8t")]
+position = Vector2(42, 19)
