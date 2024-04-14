@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1cuaak55k0hm"]
+
+[ext_resource type="Texture2D" uid="uid://bnipi2af2lx1x" path="res://pixilart-drawing-removebg-preview.png" id="1_ybgi4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62jbj"]
+atlas = ExtResource("1_ybgi4")
+region = Rect2(0, 0, 80, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4fmhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62jbj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="plasma blaster" type="Node2D"]
+position = Vector2(-57, -278)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4fmhk")
