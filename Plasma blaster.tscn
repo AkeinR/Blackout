@@ -1,21 +1,21 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1cuaak55k0hm"]
 
 [ext_resource type="Script" path="res://Plasma blaster.gd" id="1_cl8lp"]
-[ext_resource type="Texture2D" uid="uid://bnipi2af2lx1x" path="res://pixilart-drawing-removebg-preview.png" id="1_ybgi4"]
+[ext_resource type="Texture2D" uid="uid://dd8kw7akwpj2u" path="res://Scenes/plasma-gun-final (2).png" id="2_67hu8"]
 [ext_resource type="PackedScene" uid="uid://30bkt2aomk7j" path="res://plasma_bullet.tscn" id="3_10fua"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_62jbj"]
-atlas = ExtResource("1_ybgi4")
-region = Rect2(0, 0, 80, 44)
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6msy"]
+atlas = ExtResource("2_67hu8")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4fmhk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_62jbj")
+"texture": SubResource("AtlasTexture_i6msy")
 }],
 "loop": true,
-"name": &"default",
+"name": &"animation",
 "speed": 5.0
 }]
 
@@ -24,7 +24,11 @@ position = Vector2(-57, -278)
 script = ExtResource("1_cl8lp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4fmhk")
+animation = &"animation"
+autoplay = "animation"
+flip_h = true
 
 [node name="Plasma thing" type="Node2D" parent="."]
 

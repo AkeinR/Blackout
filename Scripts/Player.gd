@@ -26,8 +26,16 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, 12)
 
 	move_and_slide()
-	
 	var plasma_blaster_equiped = true
 	var shoot_cooldown = true
 	var Plasma_bullet = preload("res://plasma_bullet.tscn")
+	
+	
+	if Input.is_action_just_pressed("Shoot") and plasma_blaster_equiped and shoot_cooldown == true:
+		shoot_cooldown = false
+		var bullet_instance = Plasma_bullet.instantiate()
+		bullet_instance.rotation = $Marker2D.rotation
+		bullet_instance.global_position = $Marker2D.global_position
+		add_child(bullet_instance)
+
 	
