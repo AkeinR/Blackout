@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bddpx1pppr4u0"]
 
 [ext_resource type="PackedScene" uid="uid://dcbm8kle4vpch" path="res://Scenes/Player.tscn" id="1_j1hys"]
-[ext_resource type="Texture2D" uid="uid://ntjtbpo532hb" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_5sa28"]
+[ext_resource type="Texture2D" uid="uid://ownkef80wrw0" path="res://Pixel_Adventure_1/Free/Terrain/Terrain (16x16).png" id="2_5sa28"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hthas"]
 texture = ExtResource("2_5sa28")
