@@ -125,6 +125,7 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(55, 18)
 
 [node name="plasma blaster" parent="." instance=ExtResource("5_yid8t")]
 position = Vector2(42, 19)
